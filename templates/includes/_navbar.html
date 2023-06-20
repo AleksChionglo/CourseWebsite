@@ -1,0 +1,28 @@
+<nav>
+    <ul class="navbar">
+      <div id="navbar-home">
+        <li class="navbar-item">
+          <a href="{{ url_for('home')}}">CSCB63</a>
+        </li>
+      </div>
+      <li class="navbar-item"><a href="{{ url_for('calendar')}}">Calendar</a></li>
+      <li class="navbar-item">
+        <a href="http://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">Piazza</a>
+      </li>
+      <li class="navbar-item">
+        <a href="https://markus.utsc.utoronto.ca/cscb63w21/" target="_blank">MarkUs</a>
+      </li>
+      <li class="navbar-item">
+        <a href="{{ url_for('weekly')}}">Weekly Content</a>
+      </li>
+      <li class="navbar-item">
+        <a href="{{ url_for('assignments')}}">Assignments</a>
+      </li>
+      <li class="navbar-item"><a href="{{ url_for('links')}}">Links</a></li>
+      <li class="navbar-item"><a href="/signout">Sign Out</a></li>
+      <li class="navbar-item" id="feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe07KEI0zlkSMBaRElFIYpHmoNIQG29cADrZNHrqDTbaBrG6Q/viewform?usp=sf_link"
+          target="_blank"><b>Feedback</b></a>
+      </li>
+    </ul>
+  </nav>

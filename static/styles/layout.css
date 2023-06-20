@@ -1,0 +1,167 @@
+/* global colour variables */
+:root {
+  --blue-main: #000034;
+  --blue-uoft: #002f65;
+  --grey-main: lightgray;
+  --grey-lighter: rgb(236, 236, 236);
+}
+
+/* Main navigation bar styling */
+nav {
+  background-color: var(--blue-main);
+  z-index: 10;
+  display: block;
+  position: sticky;
+  top: 0;
+  max-width: 100vw;
+  z-index: 10;
+  box-shadow: 0 0 5px rgb(175, 175, 175);
+}
+
+#navbar-home {
+  order: 1;
+}
+
+.navbar-item {
+  order: 2;
+  display: block;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navbar-item:hover {
+  background-color: lightblue;
+  transition: 0.3s;
+}
+
+.navbar-item a {
+  padding: 1rem;
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+.navbar-item a.active-item {
+  text-decoration: underline;
+}
+
+#feedback {
+  border-radius: 20px;
+  background-color: rgb(93, 108, 192);
+  width: fit-content;
+  margin: 5px auto;
+  box-shadow: 0px 2px 5px 2px rgb(26, 26, 26);
+}
+
+#feedback a{
+  padding: 0.5rem 1rem;
+}
+
+#feedback:hover {
+  background-color: rgb(59, 68, 121);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+
+/* Main content styling */
+#main-content {
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0px 0px 20px 10px grey;
+  padding: 10px;
+  flex: 1 0 auto;
+}
+
+#page-title {
+  background-color: rgb(236, 236, 236);
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer styling */
+footer {
+  background-color: rgb(15, 13, 34);
+  color: rgb(187, 187, 187);
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.footer-item a:link {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(187, 187, 187);
+}
+
+.footer-item a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(187, 187, 187);
+}
+
+#faculty-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* General html tag styling */
+body {
+  background-color: var(--grey-main);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav,
+footer {
+  flex: 0 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Mobile responsiveness */
+/* Tablets and up */
+@media only screen and (min-width: 769px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navbar-links {
+    flex: 1 0 1;
+  }
+  #feedback {
+    margin: 0 5px;
+  }
+}

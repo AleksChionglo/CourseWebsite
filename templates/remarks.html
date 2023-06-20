@@ -1,0 +1,52 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/remarks.css" />
+{% endblock %}
+
+{% block title %}Remark Requests{% endblock %}
+
+{% block header %}Remark Requests{% endblock %}
+
+{% block body %}
+
+    {% include 'includes/_navbar.html' %}
+    
+    <div id="main-content">
+        {% block content %}
+        <h1>Remark Requests</h1>
+    
+        <p>Please respond to the questions below to request a remark for a test / assignment.</p>
+    
+        <br/>
+    
+        <p>Q1: What assignment / test are you requesting a remark for?</p>
+    
+        <select name="evaluation" id="evaluation"> A1, A2, A3, A4, Midterm, Final
+    
+        <option value="A1"> A1 </option>
+    
+        <option value="A2"> A2 </option>
+    
+        <option value="A3"> A3 </option>
+    
+        <option value="A4"> A4 </option>
+    
+        <option value="Midterm"> Midterm </option>
+    
+        <option value="Final"> Final </option>
+    
+        </select>
+    
+        <br/>
+    
+        <p>Q2: What was the issue with your mark? Explain why you believe it should be changed.</p>
+        <input type="text" name="explanation" id="txtbox">
+
+            {% include 'includes/_pagetitle.html' %}
+        {% endblock %}
+    </div>
+
+    {% include 'includes/_footer.html' %}
+
+{% endblock %}

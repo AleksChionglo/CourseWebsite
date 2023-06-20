@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/index.css" />
+{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<section id="signin-section">
+    <div id="signin-box">
+        <a id="back-btn" href="{{ url_for('root')}}">
+            <img src="/static/images/back-btn.png" alt="Go Back to Login">
+        </a>
+        <header>
+            <img id="logo" src="/static/images/UTSCLogo.png" alt="University of Toronto Logo">
+            <h1 id="course-title">
+                CSCB63
+            </h1>
+        </header>
+        <form method="POST" id="register-form">
+            <div class="form-element">
+                <h2>Create an Account</h2>
+            </div>
+            {% if error %}
+            <div class="form-element">
+                <div class="alert alert-danger">{{error}}</div>
+            </div>
+            {% endif %}
+            <label for="accountType">Select an Account Type</label>
+            <div class="form-element">
+                <select name="accountType" form="register-form">
+                    <option value="Student">Student</option>
+                    <option value="Instructor">Instructor</option>
+                </select>
+            </div>
+            <div class="form-element">
+                <input class="form-control" type="text" name="firstname" placeholder="First Name..."
+                    pattern="\p{L}\p{M}*+" required>
+            </div>
+            <div class="form-element">
+                <input class="form-control" type="text" name="lastname" placeholder="Last Name..."
+                    pattern="\p{L}\p{M}*+" required>
+            </div>
+            <div class="form-element">
+                <input class="form-control" type="text" name="username" placeholder="Username..." pattern="^(\d|\w)+$"
+                    required>
+            </div>
+            <div class="form-element">
+                <!--6 or more characters-->
+                <input type="password" class="form-control" name="password1"
+                    placeholder="Password... (8 or more characters, 1 or more letters, 1 or more numbers)"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required minlength="6">
+            </div>
+            <div class="form-element">
+                <!--6 or more characters-->
+                <input class="form-control" type="password" name="password2" placeholder="Repeat your Password..."
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required minlength="6">
+            </div>
+            <div class="form-element">
+                <button id="submit" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
